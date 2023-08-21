@@ -17,3 +17,5 @@ Welcome to the M_Contact Group Management project! This dashboard provides power
 5. **Contact Management:** Add, edit, or delete contacts as needed.
 6. **Group Creation:** Organize your contacts by creating groups.
 7. **Security:** Rest assured that your data is private and secure.
+welcome
+![Image Alt Text]((https://github.com/Away-x2/M_Contact/blob/main/src/main/resources/com/example/m_contacts/Design.png))
