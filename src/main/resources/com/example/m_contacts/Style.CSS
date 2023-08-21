@@ -1,0 +1,28 @@
+/* styles.css */
+
+.scene-with-shadow {
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 10, 0.2, 5, 5);
+}
+
+
+.white-purple:hover {
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 10, 0, 5, 0);
+
+    -fx-text-fill: #9b59b6;
+
+   
+
+
+}
+
+.white-purple:pressed {
+    -fx-text-fill: White;
+}
+
+
+/* Add hover effect */
+.title:hover {
+  color: #e74c3c; /* Change to your desired hover color */
+  transition: color 0.3s ease-in-out;
+}
+

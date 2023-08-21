@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m_contacts.IHM.Mainpagecontroller">
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="5.0" prefHeight="540.0" prefWidth="229.0" style="-fx-background-color: purple;">
+         <children>
+            <Pane layoutY="6.0" prefHeight="190.0" prefWidth="217.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+               <children>
+                  <ImageView fx:id="profilephoto" fitHeight="102.0" fitWidth="118.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@default.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="127.0" prefHeight="17.0" prefWidth="57.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="145.0" prefHeight="23.0" prefWidth="171.0" text="You are now the admin" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane layoutY="206.0" prefHeight="320.0" prefWidth="217.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+               <children>
+                  <Button layoutX="9.0" layoutY="42.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: purple;" styleClass="white-purple" stylesheets="@Style.CSS" text="Manage contacts" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1.0" layoutY="117.0" mnemonicParsing="false" onAction="#managegroups" prefHeight="50.0" prefWidth="208.0" style="-fx-background-color: purple;" stylesheets="@Style.CSS" text="Manage groups" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="white-purple" />
+                        <String fx:value="scene-with-shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1.0" layoutY="185.0" mnemonicParsing="false" onAction="#ShowAccountpage" prefHeight="50.0" prefWidth="208.0" style="-fx-background-color: purple;" stylesheets="@Style.CSS" text="Account" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="white-purple" />
+                        <String fx:value="scene-with-shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1.0" layoutY="51.0" mnemonicParsing="false" onAction="#managecontact" prefHeight="50.0" prefWidth="208.0" style="-fx-background-color: purple;" stylesheets="@Style.CSS" text="Manage contacts" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="white-purple" />
+                        <String fx:value="scene-with-shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1.0" layoutY="249.0" mnemonicParsing="false" onAction="#showabout" prefHeight="50.0" prefWidth="208.0" style="-fx-background-color: purple;" stylesheets="@Style.CSS" text="About" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="white-purple" />
+                        <String fx:value="scene-with-shadow" />
+                     </styleClass>
+                  </Button>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="firstpage" layoutX="237.0" layoutY="5.0" prefHeight="540.0" prefWidth="757.0" style="-fx-background-color: purple;">
+         <children>
+            <ImageView fitHeight="521.0" fitWidth="660.0" layoutX="70.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Design.png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" layoutX="101.0" layoutY="49.0" startX="-100.0" stroke="WHITE" />
+            <Line endX="100.0" layoutX="40.0" layoutY="66.0" startX="-42.33335876464844" startY="-7.62939453125E-6" stroke="WHITE" />
+            <Line endX="118.33331298828125" endY="-3.0517578125E-5" layoutX="590.0" layoutY="486.0" startX="-100.0" stroke="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Account" layoutX="237.0" layoutY="5.0" prefHeight="540.0" prefWidth="709.0" visible="false">
+         <children>
+            <Pane layoutX="-5.0" layoutY="14.0" prefHeight="65.0" prefWidth="762.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+               <children>
+                  <Label layoutX="272.0" layoutY="18.0" prefHeight="29.0" prefWidth="217.0" stylesheets="@Style.CSS" text="Acconut informations" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="scene-with-shadow" />
+                        <String fx:value="white-purple" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="128.0" layoutY="149.0" text="Name:">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="129.0" layoutY="195.0" text="Email:">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="128.0" layoutY="239.0" text="Password:">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profilephoto2" fitHeight="137.0" fitWidth="135.0" layoutX="584.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@default.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="201.0" layoutY="244.0" prefHeight="17.0" prefWidth="349.0" text="Because of security reasons we are not showing password " textFill="RED">
+               <font>
+                  <Font name="Castellar" size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="namelabel" layoutX="179.0" layoutY="149.0">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="emaillabel" layoutX="180.0" layoutY="195.0">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutY="1.0" prefHeight="540.0" prefWidth="82.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" />
+            <Button layoutX="115.0" layoutY="371.0" mnemonicParsing="false" onAction="#Changepassword" prefHeight="50.0" prefWidth="171.0" stylesheets="@Style.CSS" text="Change password">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="scene-with-shadow" />
+                  <String fx:value="white-purple" />
+               </styleClass>
+            </Button>
+            <Button layoutX="313.0" layoutY="371.0" mnemonicParsing="false" onAction="#deleteuseraccount" prefHeight="50.0" prefWidth="171.0" stylesheets="@Style.CSS" text="Delete account">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="scene-with-shadow" />
+                  <String fx:value="white-purple" />
+               </styleClass>
+            </Button>
+            <Button layoutX="522.0" layoutY="371.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="171.0" stylesheets="@Style.CSS" text="Log out">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="scene-with-shadow" />
+                  <String fx:value="white-purple" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Managegrouppage" layoutX="236.0" layoutY="5.0" prefHeight="540.0" prefWidth="768.0" visible="false">
+         <children>
+            <Pane layoutX="-10.0" layoutY="14.0" prefHeight="59.0" prefWidth="775.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+               <children>
+                  <Label layoutX="299.0" layoutY="15.0" prefHeight="23.0" prefWidth="191.0" stylesheets="@Style.CSS" text="Manage groups" textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="scene-with-shadow" />
+                        <String fx:value="white-purple" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </Pane>
+            <TableView fx:id="grouptable" layoutX="479.0" layoutY="81.0" prefHeight="451.0" prefWidth="229.0" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+              <columns>
+                <TableColumn fx:id="Groupid" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="groupname" prefWidth="150.6666259765625" text="GroupName" />
+              </columns>
+            </TableView>
+            <TextField fx:id="groupsearchkeyword" layoutX="113.0" layoutY="92.0" prefHeight="25.0" prefWidth="301.0" />
+            <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="392.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@searchicon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="27.0" layoutY="250.0" prefHeight="39.0" prefWidth="135.0" text="Name of the group:">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameofthegroup" layoutX="163.0" layoutY="250.0" prefHeight="39.0" prefWidth="273.0" />
+            <Button layoutX="116.0" layoutY="332.0" mnemonicParsing="false" onAction="#creategroup" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #3c005a;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Create" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="116.0" layoutY="394.0" mnemonicParsing="false" onAction="#deletegroup" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #d580ff;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="300.0" layoutY="132.0" mnemonicParsing="false" onAction="#searchgroup" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="324.0" layoutY="179.0" onAction="#aftersearch" prefHeight="24.0" prefWidth="88.0" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Whole table..." textFill="#d23bd4">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+            </Hyperlink>
+            <Button layoutX="116.0" layoutY="459.0" mnemonicParsing="false" onAction="#Creategroupfamily" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #e878ce;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Create family" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Managecontactpage" layoutX="246.0" layoutY="15.0" prefHeight="540.0" prefWidth="768.0" visible="false">
+         <children>
+            <Pane layoutX="-12.0" layoutY="-16.0" prefHeight="541.0" prefWidth="757.0">
+               <children>
+                  <Pane layoutX="-7.0" layoutY="7.0" prefHeight="59.0" prefWidth="775.0" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+                     <children>
+                        <Label layoutX="306.0" layoutY="15.0" text="Manage contacts" textFill="WHITE">
+                           <font>
+                              <Font name="Script MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TextField fx:id="contactname" layoutX="151.0" layoutY="143.0" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="contactpranom" layoutX="151.0" layoutY="180.0" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="perphone" layoutX="151.0" layoutY="219.0" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="prophone" layoutX="151.0" layoutY="260.0" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="peremail" layoutX="152.0" layoutY="344.0" prefHeight="25.0" prefWidth="265.0">
+                     <effect>
+                        <Bloom threshold="1.0" />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="proemail" layoutX="151.0" layoutY="382.0" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="contactadress" layoutX="151.0" layoutY="305.0" prefHeight="25.0" prefWidth="265.0">
+                     <padding>
+                        <Insets right="9.0" />
+                     </padding>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="143.0" prefHeight="24.0" prefWidth="102.0" text="Last name:">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="180.0" prefHeight="24.0" prefWidth="102.0" text="First name:">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="220.0" prefHeight="24.0" prefWidth="120.0" text="Personal phone number:">
+                     <font>
+                        <Font name="Centaur" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="261.0" prefHeight="24.0" prefWidth="128.0" text="Professional phone number:">
+                     <font>
+                        <Font name="Centaur" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="306.0" prefHeight="24.0" prefWidth="102.0" text="Adress:">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="345.0" prefHeight="24.0" prefWidth="102.0" text="Personal email:">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="383.0" prefHeight="24.0" prefWidth="102.0" text="Professional email:">
+                     <font>
+                        <Font name="Centaur" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="426.0" prefHeight="24.0" prefWidth="102.0" text="Gender:">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="femaleormale" layoutX="152.0" layoutY="425.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="265.0" />
+                  <TextField fx:id="searchcontactkeyword" layoutX="35.0" layoutY="90.0" prefHeight="25.0" prefWidth="301.0" promptText="you can search using name,per number or pro number">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="314.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@searchicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="354.0" layoutY="91.0" mnemonicParsing="false" onAction="#searchcontact" style="-fx-background-color: purple;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="55.0" layoutY="457.0" mnemonicParsing="false" onAction="#createcontact" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #B300B2;" stylesheets="@Style.CSS" text="Create" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="scene-with-shadow" />
+                        <String fx:value="white-purple" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="177.0" layoutY="457.0" mnemonicParsing="false" onAction="#updatecontact" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #eabfff;" stylesheets="@Style.CSS" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="scene-with-shadow" />
+                        <String fx:value="white-purple" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="299.0" layoutY="457.0" mnemonicParsing="false" onAction="#deletecontact" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #d580ff;" stylesheets="@Style.CSS" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="scene-with-shadow" />
+                        <String fx:value="white-purple" />
+                     </styleClass>
+                  </Button>
+                  <Hyperlink layoutX="359.0" layoutY="115.0" onAction="#originaltableview" prefHeight="24.0" prefWidth="42.0" text="Back.." textFill="#6f1779" />
+                  <TableView fx:id="contacttable" layoutX="431.0" layoutY="81.0" prefHeight="451.0" prefWidth="319.0" styleClass="scene-with-shadow" stylesheets="@Style.CSS">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="38.00006103515625" text="id" />
+                      <TableColumn fx:id="nom" prefWidth="112.6666259765625" text="Last name" />
+                        <TableColumn fx:id="prenom" prefWidth="112.6666259765625" text="First name" />
+                        <TableColumn fx:id="perphonetable" prefWidth="112.6666259765625" text="Personal number" />
+                        <TableColumn fx:id="prophonetable" prefWidth="154.66668701171875" text="Professional number" />
+                        <TableColumn fx:id="adress" prefWidth="194.66668701171875" text="Adress" />
+                        <TableColumn fx:id="peremailcontact" prefWidth="202.6666259765625" text="Personal email" />
+                        <TableColumn fx:id="proemailcontact" prefWidth="205.99993896484375" text="Professional email" />
+                        <TableColumn fx:id="contactgender" minWidth="0.0" prefWidth="65.333251953125" text="Genre" />
+                        <TableColumn fx:id="groupidcontact" minWidth="0.0" prefWidth="65.333251953125" text="Groupid" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="73.0" layoutY="507.0" mnemonicParsing="false" onAction="#addcontacttogroup" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #e878ce;" styleClass="scene-with-shadow" stylesheets="@Style.CSS" text="Add contact to a group" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="manageabout" layoutX="232.0" layoutY="5.0" prefHeight="540.0" prefWidth="768.0" visible="false">
+         <children>
+            <Pane layoutX="1.0" layoutY="3.0" prefHeight="534.0" prefWidth="768.0" style="-fx-background-color: purple;">
+               <children>
+                  <Label layoutX="285.0" layoutY="61.0" prefHeight="76.0" prefWidth="128.0" text="About..." textFill="WHITE">
+                     <font>
+                        <Font name="Script MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="171.0" text="This application is a user-friendly contact and group management application designed to" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="199.0" text="simplify the process of storing, updating, and organizing your contacts. Whether you're a " textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="230.0" text="professional maintaining business relationships or an individual keeping track of friends and " textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="261.0" text=",student,employees,teams,family, our application  is here to make your life easier." textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="315.0" text=".Create contacts and groups" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="344.0" text=".Easy update" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="377.0" text=".Create a groupfor contacts with the same name" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="407.0" text=".Smooth access" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="440.0" text=".Security" textFill="WHITE">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="340.33331298828125" layoutX="112.0" layoutY="137.0" startX="-111.99998474121094" stroke="WHITE" />
+                  <Line endX="460.0" endY="-3.0517578125E-5" layoutX="308.0" layoutY="490.0" startX="-111.99998474121094" stroke="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
